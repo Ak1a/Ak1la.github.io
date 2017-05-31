@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<p class="post-content">Задания на четверку тоже предполагают обсуждение списка требований, но здесь не так важно использование контроля версий, тестирования и т.д.
+</p>
+<h2>Предлагаются следующие темы заданий:</h2>
+{% for post in site.categories.four %}
+<h2><a href="{{ post.url|prepend: site.baseurl}}">{{post.title}}</a></h2>
+<div class="post-content">{{post.content}}</div>
+{% endfor %}
